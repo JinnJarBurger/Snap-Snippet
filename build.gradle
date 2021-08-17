@@ -4,9 +4,8 @@ plugins {
     id 'java'
 }
 
-group = 'com.jinnJarTech'
+group = 'com.jinnjartech'
 version = '0.0.1-SNAPSHOT'
-//sourceCompatibility = '11'
 
 repositories {
     mavenCentral()
@@ -18,10 +17,18 @@ dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-thymeleaf:2.5.3'
     implementation 'org.springframework.boot:spring-boot-starter-web:2.5.3'
     implementation 'org.springframework.boot:spring-boot-starter-actuator:2.5.3'
-    developmentOnly 'org.springframework.boot:spring-boot-devtools:2.5.3'
     runtimeOnly 'org.postgresql:postgresql:42.2.23.jre7'
     runtimeOnly 'com.h2database:h2:1.4.200'
     testImplementation 'org.springframework.boot:spring-boot-starter-test:2.5.3'
+}
+
+task makeFatJar(type: Jar) {
+    manifest.attributes('Main-Class': 'com.jinnjartech.posnip.ShareASnippetApplication')
+    baseName('poSnipFat')
+    from {
+        configurations.compileClasspath.collect {it.isDirectory() ? it : zipTree(it)}
+        with jar
+    }
 }
 
 test {
