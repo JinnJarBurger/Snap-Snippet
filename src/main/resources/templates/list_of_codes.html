@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Latest</title>
+    <link rel="stylesheet" th:href="@{/styles/style.css}">
+    <link rel="stylesheet"
+          href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.2.1/build/styles/default.min.css">
+    <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.2.1/build/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+</head>
+<body>
+<div style="text-align: center">
+    <h1 style="color: burlywood">View the top 10 latest unrestricted codes</h1>
+</div>
+<form method="get">
+    <button type="submit" formaction="/">< Home Page</button>
+</form>
+<br>
+<br>
+<div th:each="code : ${codes}">
+    <span id="load_date" class="date">[[${code.getDate()}]]</span>
+    <br>
+    <pre id="code_snippet" class="code">
+        <code>[[${code.getCode()}]]</code>
+    </pre>
+    <br>
+    <br>
+</div>
+</body>
+</html>
