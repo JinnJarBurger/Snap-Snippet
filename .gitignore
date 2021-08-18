@@ -3,7 +3,6 @@ HELP.md
 
 # Exclude everything except libs sub folder
 build
-!build/libs
 
 !gradle/wrapper/gradle-wrapper.jar
 !**/src/main/**/build/
