@@ -1,1 +1,1 @@
-web: java $JAVA_OPTS -jar poSnip-0.0.1-SNAPSHOT.jar  $JAR_OPTS
+web: java -jar build/libs/poSnip-0.0.1-SNAPSHOT.jar
