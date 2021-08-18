@@ -40,10 +40,13 @@
             if (codeTime > 0) {
                 setInterval(() => {
                     timeRem.innerHTML = codeTime.toString();
-                    execute();
                     if (codeTime === 0)
                         location.reload();
                 }, 1000);
+
+                setInterval(() => {
+                    execute();
+                }, 1000)
             }
         }
 
