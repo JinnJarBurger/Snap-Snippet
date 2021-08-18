@@ -2,6 +2,7 @@ HELP.md
 .gradle
 
 # Exclude everything except libs sub folder
+!build/
 build/**
 !build/libs
 
