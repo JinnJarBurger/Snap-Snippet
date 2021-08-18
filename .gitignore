@@ -1,6 +1,11 @@
 HELP.md
 .gradle
-#build/
+
+# Exclude everything except
+!build/
+build/*
+!build/libs
+
 !gradle/wrapper/gradle-wrapper.jar
 !**/src/main/**/build/
 !**/src/test/**/build/
