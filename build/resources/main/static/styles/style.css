@@ -1,0 +1,17 @@
+html {
+    background: dimgrey;
+}
+
+.date {
+    display: inline-block;
+    color: springgreen;
+}
+
+#code_snippet {
+    border-radius: 5px;
+    display: inline-block;
+    background-color: lightgray;
+    border: 1px solid dimgrey;
+    padding: 10px;
+    margin: auto;
+}

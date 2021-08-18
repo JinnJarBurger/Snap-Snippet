@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+    <style rel="stylesheet">
+        html {
+            background: #474141;
+        }
+
+        label {
+            color: cadetblue;
+        }
+
+        #page_intro {
+            color: beige;
+        }
+    </style>
+    <script type="text/javascript">
+        // setting the form action dynamically
+        function getCode() {
+            if (document.getElementById('uuid_container').value !== '') {
+                let btnView = document.getElementById("get_code");
+                btnView.formAction = '/code/' + document.getElementById("uuid_container").value.replaceAll(' ', '')
+            }
+        }
+    </script>
+</head>
+<body>
+<div id="page_intro" style="text-align: center">
+    <h1>Welcome to Snap-Snippet</h1>
+    <h2>Post and share your snippets with added restrictions!</h2>
+</div>
+<form method="get">
+    <button id="post_code" formaction="/code/new">Post Snippet</button>
+    <br>
+    <br>
+    <button id="view_code_latest" formaction="/code/latest">View Unrestricted Snippets</button>
+    <br>
+    <br>
+    <br>
+    <label for="uuid_container">View code by inserting your unique id below:</label>
+    <br>
+    <textarea id="uuid_container" cols="50" rows="5"></textarea>
+    <br>
+    <button id="get_code" onclick="getCode()">View Code</button>
+</form>
+</body>
+</html>
