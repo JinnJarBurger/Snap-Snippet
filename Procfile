@@ -1,1 +1,1 @@
-web: java -jar build/libs/poSnip-0.0.1-SNAPSHOT.jar
+web: java -jar build\libs\poSnip-0.0.1-SNAPSHOT.jar
