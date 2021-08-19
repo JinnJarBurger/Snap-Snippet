@@ -18,7 +18,6 @@ ___
 ___
 
 # Application Features
-___
 - Post Snippet and get a unique id
 - Post Snippet with added restrictions
     - Time restriction
@@ -31,7 +30,6 @@ ___
     - Delete
 
 # Build with gradle
-___
 Before starting make sure gradle is downloaded. To get started with gradle click 
 [here](https://gradle.org/). 
 
@@ -80,7 +78,6 @@ BUILD SUCCESSFUL in 1m 7s
 ```
 
 # Run application locally
-___
 To run the app locally the following changes need to be made to the 
 `application.properties` file:
 ```properties
@@ -130,8 +127,8 @@ postgres=# \l
 ```
 4. Now rebuild the project or simply use an IDE (preferably Intellij) to run the application
 and then to view the web app got to this link `http://localhost:8080/`.
-
 ___
+
 # Using the Api features
 [![Postman](https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=postman&logoColor=white)](https://www.postman.com/downloads/)
 - ### Post a snippet
