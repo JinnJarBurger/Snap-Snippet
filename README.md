@@ -162,7 +162,7 @@ The reply should be in a `json` format with a unique id:
 }
 ```
 
-- Get a snippet
+- ### Get a snippet
 
 To get a snippet open `Postman` then open a `Get` tab and paste the following link with the 
 following end points (with the desired unique id) `https://snap-snippet.herokuapp.com/api/code/983fca68-303c-4a52-b55e-87ac3c3b5fb2`.
@@ -177,7 +177,7 @@ The response would be in the following `json` format:
 }
 ```
 
-- Delete a snippet
+- ### Delete a snippet
 
 To delete a snippet open `Postman` then open a `DEL` tab and paste the following link with
 the following end points (with the desired unique id) `https://snap-snippet.herokuapp.com/api/code/delete/983fca68-303c-4a52-b55e-87ac3c3b5fb2`.
