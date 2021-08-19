@@ -162,8 +162,6 @@ The reply should be in a `json` format with a unique id:
 }
 ```
 
-![Post](https://raw.github.com/JinnJarBurger/Snap-Snippet/Screenshots/Screenshot(35).png)
-
 - Get a snippet
 
 To get a snippet open `Postman` then open a `Get` tab and paste the following link with the 
@@ -179,8 +177,6 @@ The response would be in the following `json` format:
 }
 ```
 
-![Get](https://raw.github.com/JinnJarBurger/Snap-Snippet/Screenshots/Screenshot(36).png)
-
 - Delete a snippet
 
 To delete a snippet open `Postman` then open a `DEL` tab and paste the following link with
@@ -188,7 +184,6 @@ the following end points (with the desired unique id) `https://snap-snippet.hero
 
 The response will be a simple `Deleted!` string message.
 
-![Del](https://raw.github.com/JinnJarBurger/Snap-Snippet/Screenshots/Screenshot(37).png)
 ___
 
 ### Try out the site at: https://snap-snippet.herokuapp.com/
