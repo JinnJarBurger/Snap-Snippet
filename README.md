@@ -28,6 +28,7 @@ ___
     - Post
     - View
     - Delete
+___
 
 # Build with gradle
 Before starting make sure gradle is downloaded. To get started with gradle click 
@@ -76,6 +77,7 @@ BUILD SUCCESSFUL in 12s
 BUILD SUCCESSFUL in 1m 7s
 7 actionable tasks: 7 executed
 ```
+___
 
 # Run application locally
 To run the app locally the following changes need to be made to the 
