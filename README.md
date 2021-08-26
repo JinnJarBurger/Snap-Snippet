@@ -147,7 +147,7 @@ postgres=# \l
 ```
 
 4. Now rebuild the project or simply use an IDE (preferably Intellij) to run the application and then to view the web
-   app got to this link `http://localhost:8080/`.
+   app use this link `http://localhost:8080/`.
 
 ___
 

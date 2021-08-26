@@ -21,11 +21,6 @@
         let codeViews = /*[[${codeViews}]]*/ 0;
         /*]]>*/
 
-        // Prevent screenshot
-        $(document).keyup(function(e){
-            if(e.keyCode === 44) return false;
-        });
-
         // Prevent context menu
         document.addEventListener('contextmenu', event => {
             event.preventDefault();
