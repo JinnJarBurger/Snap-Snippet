@@ -48,13 +48,12 @@ public class CodeApiController {
         return service.getCode(uuid);
     }
 
-    @GetMapping("/latest")
+    @GetMapping(value = "/latest", produces = "application/json")
     public List<Code> latestJCodes() {
         return service.getLatest();
     }
 
-    @PostMapping(value = "/new",
-            produces = "application/json", consumes = "application/json")
+    @PostMapping(value = "/new", produces = "application/json", consumes = "application/json")
     public String addJsonCode(@RequestBody Code code) {
         if (code.getViews() > 0)
             code.setRestrictedByViews(true);

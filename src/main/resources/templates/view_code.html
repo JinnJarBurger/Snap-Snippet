@@ -86,6 +86,7 @@
             </span>
             <br>
         </div>
+
         <div th:if="${Code.isRestrictedByTime()}">
             <br>
             <span id="time_restriction">
@@ -93,10 +94,15 @@
             </span>
             <br>
         </div>
+
     </div>
-    <pre id="code_snippet" class="code">
-        <code id="text" th:text="${Code.getCode()}"></code>
-    </pre>
+
+    <div class="code_container">
+        <pre id="code_snippet" class="code">
+            <code id="code_text" th:text="${Code.getCode()}"></code>
+        </pre>
+    </div>
+
 </div>
 <br>
 <br>
