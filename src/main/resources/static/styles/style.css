@@ -61,6 +61,7 @@ button {
 }
 
 button#return_home:hover {
+    background-color: #282c34;
     box-shadow: 4px 4px 4px rgba(150, 0, 0, 0.75),
     4px -4px 4px rgba(150, 0, 0, 0.75),
     -4px 4px 4px rgba(150, 0, 0, 0.75),
