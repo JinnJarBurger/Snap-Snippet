@@ -14,6 +14,15 @@
     4px -4px 4px #088F8F,
     -4px 4px 4px #088F8F,
     -4px -4px 4px #088F8F;
+    cursor: pointer;
+    transition-duration: 1s;
+}
+
+.intro:hover {
+    box-shadow: 4px 4px 4px rgba(150, 0, 0, 0.75),
+    4px -4px 4px rgba(150, 0, 0, 0.75),
+    -4px 4px 4px rgba(150, 0, 0, 0.75),
+    -4px -4px 4px rgba(150, 0, 0, 0.75);
 }
 
 .heading {

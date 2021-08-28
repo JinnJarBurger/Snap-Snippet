@@ -39,6 +39,15 @@ html {
     4px -4px 4px #088F8F,
     -4px 4px 4px #088F8F,
     -4px -4px 4px #088F8F;
+    cursor: pointer;
+    transition-duration: 1s;
+}
+
+.header:hover {
+    box-shadow: 4px 4px 4px rgba(150, 0, 0, 0.75),
+    4px -4px 4px rgba(150, 0, 0, 0.75),
+    -4px 4px 4px rgba(150, 0, 0, 0.75),
+    -4px -4px 4px rgba(150, 0, 0, 0.75);
 }
 
 .subheading {
@@ -131,4 +140,6 @@ label {
     -4px -4px 4px #088F8F;
     font-family: "Source Code Pro", monospace;
     width: fit-content;
+    transition-duration: 0.5s;
+    transition-delay: 0.5s;
 }
