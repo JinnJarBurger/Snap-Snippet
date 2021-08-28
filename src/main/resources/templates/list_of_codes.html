@@ -17,7 +17,8 @@
 <br>
 <br>
 <div th:each="code : ${codes}">
-    <span id="load_date" class="date">[[${code.getDate()}]]</span>
+    <span id="load_date" class="date" style="font-family: Source Code Pro, monospace">
+        [[${code.getDate()}]]</span>
     <br>
     <pre id="code_snippet" class="code">
         <code id="code_text">[[${code.getCode()}]]</code>
