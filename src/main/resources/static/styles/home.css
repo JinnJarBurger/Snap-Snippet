@@ -1,0 +1,105 @@
+/*For home page*/
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@200&display=swap');
+
+.intro {
+    text-align: center;
+    color: #FFFFFF;
+    padding: 50px;
+    width: 80%;
+    margin: 0 auto 60px;
+    background-color: #474141;
+    border: #474141;
+    border-radius: 1px;
+    box-shadow: 4px 4px 4px #088F8F,
+    4px -4px 4px #088F8F,
+    -4px 4px 4px #088F8F,
+    -4px -4px 4px #088F8F;
+}
+
+.heading {
+    font-family: "Source Code Pro", monospace;
+    padding: 10px;
+    font-size: 45px;
+}
+
+.subheading {
+    font-family: "Source Code Pro", monospace;
+}
+
+#view_code_latest {
+    margin-bottom: 100px;
+}
+
+textarea#uuid_container {
+    padding: 10px;
+    border-radius: 1px;
+    box-shadow: 1px 1px 1px #088F8F,
+    1px -1px 1px #088F8F,
+    -1px 1px 1px #088F8F,
+    -1px -1px 1px #088F8F;
+    outline: none;
+    width: 99%;
+    height: 20px;
+}
+
+html {
+    background: #474141;
+}
+
+label {
+    border-radius: 5px;
+    background-color: #088F8F;
+    color: #FFFFFF;
+    padding: 5px 5px 10px;
+    font-size: 15px;
+}
+
+.form_container {
+    margin: 0 auto;
+}
+
+.button {
+    border-radius: 1px;
+    background-color: #088F8F;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 13px;
+    padding: 20px;
+    width: 100%;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 0 auto;
+}
+
+.button span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+
+.button span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -10px;
+    transition: 0.5s;
+}
+
+.button:hover span {
+    padding-right: 25px;
+}
+
+.button:hover span:after {
+    opacity: 1;
+    right: 0;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    margin-left: 40%;
+    margin-bottom: 2%;
+    font-family: "Source Code Pro", monospace;
+}

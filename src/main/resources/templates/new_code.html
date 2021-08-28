@@ -4,41 +4,23 @@
     <meta charset="UTF-8">
     <title>Create</title>
     <script type="text/javascript" th:src="@{/js/send.js}"></script>
-    <style rel="stylesheet">
-        html {
-            background: #474141;
-        }
-
-        textarea {
-            border-radius: 5px;
-        }
-
-        label {
-            color: cadetblue;
-        }
-
-        input {
-            border-radius: 3px;
-        }
-
-        #heading {
-            color: darkseagreen;
-            text-align: center;
-        }
-    </style>
+    <link rel="stylesheet" th:href="@{/styles/style.css}">
 </head>
 <body>
-<h1 id="heading">Post your snippet here</h1>
+<div class="header">Post your snippet here</div>
 <form onsubmit="return false;">
-    <label for="code_snippet"></label>
-    <textarea id="code_snippet" cols="60" rows="10">// write your code here</textarea>
+    <label for="code_snippet">Snippet:</label>
+    <br>
+    <textarea id="code_snippet" cols="60" rows="10" placeholder="// write your code here"></textarea>
     <br>
     <br>
     <label for="time_restriction">Time restriction:</label>
+    <br>
     <input id="time_restriction" type="text"/>
     <br>
     <br>
     <label for="views_restriction">Views restriction:</label>
+    <br>
     <input id="views_restriction" type="text">
     <br>
     <br>
@@ -46,14 +28,12 @@
         Submit
     </button>
     <br>
-    <br>
     <div id="code_info">
-        <p id="code_uuid"></p>
+        <div id="code_uuid"></div>
+        <a id="code_link" style="color: #088F8F"></a>
     </div>
-    <a id="code_link"></a>
 </form>
 <form>
-    <br>
     <br>
     <button id="return_home" formaction="/">< Home Page</button>
 </form>

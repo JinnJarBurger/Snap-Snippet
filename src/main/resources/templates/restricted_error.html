@@ -1,16 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <title>Error</title>
+    <link rel="stylesheet" th:href="@{/styles/style.css}">
 </head>
 <body>
-<div style="text-align: center">
-    <h1>404 Not Found</h1>
-    <h2>Snippet has self-destructed/ No such snippet exists</h2>
+<div class="header" style="text-align: center">
+    <div>404 Not Found</div>
+    <div class="subheading" style="font-size: 18px">Snippet has self-destructed/ No such snippet exists</div>
 </div>
 <form>
-    <button formaction="/">< Home Page</button>
+    <button id="return_home" formaction="/">< Home Page</button>
 </form>
 </body>
 </html>

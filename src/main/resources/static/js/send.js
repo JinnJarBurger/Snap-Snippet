@@ -5,7 +5,7 @@ function send() {
         "views": document.getElementById("views_restriction").value
     };
 
-    if (object['code'] !== '// write your code here' && object['code'] !== '') {
+    if (object['code'] !== '') {
         let json = JSON.stringify(object);
 
         let xhr = new XMLHttpRequest();
@@ -14,9 +14,12 @@ function send() {
         xhr.send(json);
         let response = JSON.parse(xhr.responseText);
 
+        document.getElementById("code_info").style.display = "block";
+
         let uuid = response['id'];
+        let txt = 'Your unique id is: ' + uuid + ' (make sure to note it down!)';
         let codeUuid = document.getElementById('code_uuid');
-        codeUuid.innerHTML = 'Your unique id is: ' + uuid + ' (make sure to note it down!)';
+        codeUuid.innerHTML = txt;
         codeUuid.style.color = "white";
 
         let codeLink = document.getElementById('code_link');

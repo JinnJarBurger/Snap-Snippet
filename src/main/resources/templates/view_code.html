@@ -75,24 +75,22 @@
     </script>
 </head>
 <body>
+<div class="header">~Secret Snippet~</div>
 <div id="codeObject" th:value="${Code}" onmousedown="return false">
-    <span id="load_date" class="date" th:text="${Code.getDate()}"></span>
-    <br>
+    <div id="load_date" class="date" style="font-family: Source Code Pro, monospace" th:text="${Code.getDate()}"></div>
     <div th:if="${Code.getViews()} ge 0 or ${Code.getTime()} gt 0">
         <div th:if="${Code.isRestrictedByViews()}">
-            <br>
-            <span id="views_restriction">
+            <span id="views_restriction spanView"
+                  style="color: #FFFFFF;padding: 5px;font-family: Source Code Pro, monospace">
             <u>[[${Code.getViews()}]]</u> more views allowed
             </span>
-            <br>
         </div>
 
         <div th:if="${Code.isRestrictedByTime()}">
-            <br>
-            <span id="time_restriction">
+            <span id="time_restriction spanTime"
+                  style="color: #FFFFFF;padding: 5px;font-family: Source Code Pro, monospace">
             The code will be available for <u id="time">[[${Code.getTime()}]]</u> seconds
             </span>
-            <br>
         </div>
 
     </div>
@@ -105,9 +103,8 @@
 
 </div>
 <br>
-<br>
 <form method="get">
-    <button type="submit" formaction="/">< Home Page</button>
+    <button id="return_home" type="submit" formaction="/">< Home Page</button>
 </form>
 </body>
 </html>

@@ -1,21 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <title>Home</title>
-    <style rel="stylesheet">
-        html {
-            background: #474141;
-        }
-
-        label {
-            color: cadetblue;
-        }
-
-        #page_intro {
-            color: beige;
-        }
-    </style>
+    <link rel="stylesheet" th:href="@{/styles/home.css}">
     <script type="text/javascript">
         // setting the form action dynamically
         function getCode() {
@@ -27,23 +15,33 @@
     </script>
 </head>
 <body>
-<div id="page_intro" style="text-align: center">
-    <h1>Welcome to Snap-Snippet</h1>
-    <h2>Post and share your snippets with added restrictions!</h2>
+<div class="intro" id="page_intro">
+    <div class="heading">Welcome to Snap-Snippet</div>
+    <div class="subheading" style="font-size: 18px">Post and share your snippets with added restrictions!</div>
 </div>
-<form method="get">
-    <button id="post_code" formaction="/code/new">Post Snippet</button>
-    <br>
-    <br>
-    <button id="view_code_latest" formaction="/code/latest">View Unrestricted Snippets</button>
-    <br>
-    <br>
-    <br>
-    <label for="uuid_container">View code by inserting your unique id below:</label>
-    <br>
-    <textarea id="uuid_container" cols="50" rows="5"></textarea>
-    <br>
-    <button id="get_code" onclick="getCode()">View Code</button>
-</form>
+<div class="form_container">
+    <form method="get">
+        <button class="button" id="post_code" formaction="/code/new">
+            <span>Post Snippet</span>
+        </button>
+        <br>
+        <button class="button" id="view_code_latest" formaction="/code/latest">
+            <span>View Unrestricted Snippets</span>
+        </button>
+        <br>
+        <div class="view_code_section">
+            <label for="uuid_container">Unique id:</label>
+            <br>
+            <textarea id="uuid_container" cols="50" rows="5" placeholder="Enter unique id here"></textarea>
+            <br>
+            <button class="button" id="get_code" onclick="getCode()">
+                <span>View Code</span>
+            </button>
+        </div>
+    </form>
+</div>
+<footer id="footer" style="color: #FFFFFF">
+    Visit my github profile <a href="https://github.com/JinnJarBurger" style="color: #088F8F">here</a>
+</footer>
 </body>
 </html>
