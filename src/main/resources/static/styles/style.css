@@ -5,17 +5,34 @@ html {
 }
 
 .date {
-    display: inline-block;
-    color: springgreen;
+    border-radius: 5px;
+    background-color: #088F8F;
+    color: #FFFFFF;
+    padding: 5px 5px 10px;
+    font-size: 15px;
 }
 
-#code_snippet {
+pre#code_snippet {
     border-radius: 5px;
     display: inline-block;
     background-color: lightgray;
-    border: 1px solid dimgrey;
     padding: 10px;
     margin: auto;
+}
+
+textarea#code_snippet {
+    resize: none;
+    border-radius: 5px;
+    border: none;
+    display: inline-block;
+    background-color: lightgray;
+    padding: 5px;
+    margin: auto;
+    outline: none;
+    box-shadow: 1px 1px 1px #088F8F,
+    1px -1px 1px #088F8F,
+    -1px 1px 1px #088F8F,
+    -1px -1px 1px #088F8F;
 }
 
 #code_text {
@@ -31,23 +48,21 @@ html {
     color: #FFFFFF;
     padding: 50px;
     width: 80%;
-    margin: 0 auto 60px;
-    background-color: #474141;
-    border: #474141;
+    margin: 0 auto 40px;
+    background-color: transparent;
     border-radius: 1px;
     box-shadow: 4px 4px 4px #088F8F,
     4px -4px 4px #088F8F,
     -4px 4px 4px #088F8F,
     -4px -4px 4px #088F8F;
-    cursor: pointer;
-    transition-duration: 1s;
+    transition-duration: 0.5s;
 }
 
 .header:hover {
-    box-shadow: 4px 4px 4px rgba(150, 0, 0, 0.75),
-    4px -4px 4px rgba(150, 0, 0, 0.75),
-    -4px 4px 4px rgba(150, 0, 0, 0.75),
-    -4px -4px 4px rgba(150, 0, 0, 0.75);
+    box-shadow: 6px 6px 6px #088F8F,
+    6px -6px 6px #088F8F,
+    -6px 6px 6px #088F8F,
+    -6px -6px 6px #088F8F;
 }
 
 .subheading {
@@ -62,19 +77,43 @@ button {
     color: white;
     padding: 20px;
     text-align: center;
-    text-decoration: none;
-    font-size: 12px;
+    font-size: 13px;
     margin: 0 auto;
     cursor: pointer;
-    transition-duration: 0.4s;
+    transition: all 0.5s;
+}
+
+button#return_home span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+
+button#return_home span:after {
+    content: '\00ab';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    left: 10px;
+    transition: 0.5s;
+}
+
+button#return_home:hover span {
+    padding-left: 25px;
+}
+
+button#return_home:hover span:after {
+    opacity: 1;
+    left: 0;
 }
 
 button#return_home:hover {
-    background-color: #282c34;
-    box-shadow: 4px 4px 4px rgba(150, 0, 0, 0.75),
-    4px -4px 4px rgba(150, 0, 0, 0.75),
-    -4px 4px 4px rgba(150, 0, 0, 0.75),
-    -4px -4px 4px rgba(150, 0, 0, 0.75);
+    background-color: transparent;
+    box-shadow: 4px 4px 4px #088F8F,
+    4px -4px 4px #088F8F,
+    -4px 4px 4px #088F8F,
+    -4px -4px 4px #088F8F;
 }
 
 button#send_snippet {
@@ -85,10 +124,18 @@ button#send_snippet {
     color: #FFFFFF;
     padding: 15px;
     text-align: center;
-    transition-duration: 0.4s;
+    transition-duration: 0.5s;
     text-decoration: none;
     overflow: hidden;
     cursor: pointer;
+}
+
+button#send_snippet:hover {
+    background-color: transparent;
+    box-shadow: 4px 4px 4px #282c34,
+    4px -4px 4px #282c34,
+    -4px 4px 4px #282c34,
+    -4px -4px 4px #282c34;;
 }
 
 button#send_snippet:after {
@@ -109,16 +156,6 @@ button#send_snippet:active:after {
     margin: 0;
     opacity: 1;
     transition: 0s
-}
-
-textarea input {
-    padding: 10px;
-    border-radius: 1px;
-    box-shadow: 1px 1px 1px #088F8F,
-    1px -1px 1px #088F8F,
-    -1px 1px 1px #088F8F,
-    -1px -1px 1px #088F8F;
-    outline: none;
 }
 
 label {
@@ -142,4 +179,13 @@ label {
     width: fit-content;
     transition-duration: 0.5s;
     transition-delay: 0.5s;
+}
+
+div.date_restrictions_container {
+    width: fit-content;
+    border-radius: 5px;
+    background-color: #088F8F;
+    color: #FFFFFF;
+    padding: 2px;
+    font-size: 15px;
 }

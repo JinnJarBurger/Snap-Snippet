@@ -7,22 +7,20 @@
     padding: 50px;
     width: 80%;
     margin: 0 auto 60px;
-    background-color: #474141;
-    border: #474141;
+    background-color: transparent;
     border-radius: 1px;
     box-shadow: 4px 4px 4px #088F8F,
     4px -4px 4px #088F8F,
     -4px 4px 4px #088F8F,
     -4px -4px 4px #088F8F;
-    cursor: pointer;
-    transition-duration: 1s;
+    transition-duration: 0.5s;
 }
 
 .intro:hover {
-    box-shadow: 4px 4px 4px rgba(150, 0, 0, 0.75),
-    4px -4px 4px rgba(150, 0, 0, 0.75),
-    -4px 4px 4px rgba(150, 0, 0, 0.75),
-    -4px -4px 4px rgba(150, 0, 0, 0.75);
+    box-shadow: 6px 6px 6px #088F8F,
+    6px -6px 6px #088F8F,
+    -6px 6px 6px #088F8F,
+    -6px -6px 6px #088F8F;
 }
 
 .heading {
@@ -40,7 +38,9 @@
 }
 
 textarea#uuid_container {
+    resize: none;
     padding: 10px;
+    border: none;
     border-radius: 1px;
     box-shadow: 1px 1px 1px #088F8F,
     1px -1px 1px #088F8F,
@@ -77,7 +77,14 @@ label {
     width: 100%;
     transition: all 0.5s;
     cursor: pointer;
-    margin: 0 auto;
+}
+
+.button:hover {
+    background-color: transparent;
+    box-shadow: 4px 4px 4px #088F8F,
+    4px -4px 4px #088F8F,
+    -4px 4px 4px #088F8F,
+    -4px -4px 4px #088F8F;
 }
 
 .button span {

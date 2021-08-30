@@ -77,22 +77,26 @@
 <body>
 <div class="header">~Secret Snippet~</div>
 <div id="codeObject" th:value="${Code}" onmousedown="return false">
-    <div id="load_date" class="date" style="font-family: Source Code Pro, monospace" th:text="${Code.getDate()}"></div>
-    <div th:if="${Code.getViews()} ge 0 or ${Code.getTime()} gt 0">
-        <div th:if="${Code.isRestrictedByViews()}">
+    <div class="date_restrictions_container">
+        <div id="load_date" style="font-family: Source Code Pro, monospace">
+            <u th:text="${Code.getDate()}"></u>
+        </div>
+        <div th:if="${Code.getViews()} ge 0 or ${Code.getTime()} gt 0">
+            <div th:if="${Code.isRestrictedByViews()}">
             <span id="views_restriction spanView"
                   style="color: #FFFFFF;padding: 5px;font-family: Source Code Pro, monospace">
             <u>[[${Code.getViews()}]]</u> more views allowed
             </span>
-        </div>
+            </div>
 
-        <div th:if="${Code.isRestrictedByTime()}">
+            <div th:if="${Code.isRestrictedByTime()}">
             <span id="time_restriction spanTime"
                   style="color: #FFFFFF;padding: 5px;font-family: Source Code Pro, monospace">
             The code will be available for <u id="time">[[${Code.getTime()}]]</u> seconds
             </span>
-        </div>
+            </div>
 
+        </div>
     </div>
 
     <div class="code_container">
@@ -104,7 +108,9 @@
 </div>
 <br>
 <form method="get">
-    <button id="return_home" type="submit" formaction="/">< Home Page</button>
+    <button id="return_home" type="submit" formaction="/">
+        <span>Home Page</span>
+    </button>
 </form>
 </body>
 </html>

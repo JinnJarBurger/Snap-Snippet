@@ -16,12 +16,22 @@
     <br>
     <label for="time_restriction">Time restriction:</label>
     <br>
-    <input id="time_restriction" type="text"/>
+    <input id="time_restriction" type="text" style="box-shadow:
+    1px 1px 1px #088F8F,
+    1px -1px 1px #088F8F,
+    -1px 1px 1px #088F8F,
+    -1px -1px 1px #088F8F;
+    outline: none; padding: 2px; border-radius: 2px; border: none"/>
     <br>
     <br>
     <label for="views_restriction">Views restriction:</label>
     <br>
-    <input id="views_restriction" type="text">
+    <input id="views_restriction" type="text" style="box-shadow:
+    1px 1px 1px #088F8F,
+    1px -1px 1px #088F8F,
+    -1px 1px 1px #088F8F,
+    -1px -1px 1px #088F8F;
+    outline: none; padding: 2px; border-radius: 2px; border: none">
     <br>
     <br>
     <button id="send_snippet" th:onclick="send()">
@@ -35,7 +45,9 @@
 </form>
 <form>
     <br>
-    <button id="return_home" formaction="/">< Home Page</button>
+    <button id="return_home" formaction="/">
+        <span>Home Page</span>
+    </button>
 </form>
 </body>
 </html>
