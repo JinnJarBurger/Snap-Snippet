@@ -35,6 +35,10 @@
 
         document.addEventListener("DOMContentLoaded", startTime);
 
+        window.onbeforeunload = () => {
+          return 'hello';
+        };
+
         function startTime() {
             let timeRem = document.getElementById("time");
             if (codeTime > 0) {
