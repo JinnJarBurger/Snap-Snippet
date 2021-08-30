@@ -5,6 +5,12 @@
     <title>Create</title>
     <script type="text/javascript" th:src="@{/js/send.js}"></script>
     <link rel="stylesheet" th:href="@{/styles/style.css}">
+    <script type="text/javascript">
+        // Reload if content is loaded from history
+        if(performance.navigation.type === 2){
+            location.reload();
+        }
+    </script>
 </head>
 <body>
 <div class="header">Post your snippet here</div>

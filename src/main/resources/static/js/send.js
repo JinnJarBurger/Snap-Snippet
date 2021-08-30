@@ -17,7 +17,7 @@ function send() {
         document.getElementById("code_info").style.display = "block";
 
         let uuid = response['id'];
-        let txt = 'Your unique id is: ' + uuid + ' (make sure to note it down!)';
+        let txt = `Your unique id is: ${uuid} (make sure to note it down!)`;
         let codeUuid = document.getElementById('code_uuid');
         codeUuid.innerHTML = txt;
         codeUuid.style.color = "white";

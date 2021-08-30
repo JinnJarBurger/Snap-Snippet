@@ -4,6 +4,12 @@
     <meta charset="UTF-8">
     <title>Error</title>
     <link rel="stylesheet" th:href="@{/styles/style.css}">
+    <script type="text/javascript">
+        // Reload if content is loaded from history
+        if(performance.navigation.type === 2){
+            location.reload();
+        }
+    </script>
 </head>
 <body>
 <div class="header" style="text-align: center">

@@ -5,6 +5,11 @@
     <title>Home</title>
     <link rel="stylesheet" th:href="@{/styles/home.css}">
     <script type="text/javascript">
+        // Reload if content is loaded from history
+        if(performance.navigation.type === 2){
+            location.reload();
+        }
+
         // setting the form action dynamically
         function getCode() {
             if (document.getElementById('uuid_container').value !== '') {

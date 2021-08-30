@@ -14,6 +14,11 @@
         }
     </style>
     <script type="text/javascript" th:inline="javascript">
+        // Reload if content is loaded from history
+        if(performance.navigation.type === 2){
+            location.reload();
+        }
+
         /*<![CDATA[*/
         let codeId = /*[[${codeId}]]*/ 0;
         let codeCode = /*[[${codeCode}]]*/ "Default";
@@ -34,10 +39,6 @@
         });
 
         document.addEventListener("DOMContentLoaded", startTime);
-
-        window.onbeforeunload = () => {
-          return 'hello';
-        };
 
         function startTime() {
             let timeRem = document.getElementById("time");
