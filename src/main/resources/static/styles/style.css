@@ -177,14 +177,14 @@ label {
     -4px -4px 4px #088F8F;
     font-family: "Source Code Pro", monospace;
     width: fit-content;
+    width: -moz-fit-content;
     transition-duration: 0.5s;
     transition-delay: 0.5s;
 }
 
 div.date_restrictions_container {
     width: fit-content;
-    -moz-column-width: fit-content;
-    -webkit-column-width: fit-content;
+    width: -moz-fit-content;
     border-radius: 5px;
     background-color: #088F8F;
     color: #FFFFFF;

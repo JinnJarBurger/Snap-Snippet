@@ -68,6 +68,7 @@ label {
 }
 
 .button {
+    border-color: dimgray;
     border-radius: 1px;
     background-color: #088F8F;
     color: #FFFFFF;

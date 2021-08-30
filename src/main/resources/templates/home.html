@@ -6,7 +6,7 @@
     <link rel="stylesheet" th:href="@{/styles/home.css}">
     <script type="text/javascript">
         // Reload if content is loaded from history
-        if(performance.navigation.type === 2){
+        if (String(performance.getEntriesByType("navigation")[0].type) === "back_forward") {
             location.reload();
         }
 
